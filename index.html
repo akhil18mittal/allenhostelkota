@@ -1,39 +1,3 @@
-<?php
-if(isset($_POST['Submit_Form']))
-{
-  if(!empty($_POST['username']) && !empty($_POST['email']) && !empty($_POST['phone']) && !empty($_POST['city']))
-   {
-        
-		$to      = "info@prabhatresidency.com";
-  		$subject = "Prabhat Residency - Visit Enquiry";
-		$message = "<html xmlns=\"http://www.w3.org/1999/xhtml\">
-		<head>
-		<title>Best Boys Hostel in Landmark city Kota - Prabhat Residency</title>
-		  </head>
-		 <body>
-			<h3>Visit Enquiry Details:- </h3>
-			<strong>Name:- </strong>".trim($_POST['username'])."<br>
-			<strong>Contact No:- </strong>".trim($_POST['phone'])."<br>
-			<strong>Email Address:- </strong>".trim($_POST['email'])."<br>
-			<strong>Institute:- </strong>".trim($_POST['institute'])."<br>
-			<strong>City:- </strong>".addslashes(trim($_POST['city']))."<br><br>
-		</body>
-		</html>";
-		
-		//echo $message;
-		$headers  = 'MIME-Version: 1.0' . "\r\n";
-		$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-		$headers .= 'From: '.trim($_POST['name']).' <'.trim($_POST['email']).'>' . "\r\n";
-  	   if(mail($to, $subject, $message, $headers))
-         {
-           $_SESSION['visit_action'] = "<div style='font-size:12px;' class='alert alert-success'><p><i class='fa fa-check' aria-hidden='true'></i>Thank you for posting your visit enquiry. We'll contact you as soon as possible.</div>";
-         }
-	  else { $_SESSION['visit_action'] = "<div style='font-size:12px;' class='alert alert-danger'>Error Sending Email..</div>"; }
-		
-	
-   }
-}
-?>
 <!doctype html>
 <html class="no-js" lang="">
 <head>
@@ -86,7 +50,6 @@ if(isset($_POST['Submit_Form']))
 <!-- Preloader End Here -->
 <!-- Main Body Area Start Here -->
 <div id="wrapper" class="wrapper">
-    <?php $link=1; include("header.php");?>
     <!-- Slider Area Start Here -->
     <div id="masterslider" class="master-slider ms-skin-default">
       
@@ -128,8 +91,6 @@ if(isset($_POST['Submit_Form']))
                             	<span class="fa fa-send-o"></span>                            </div>
                             <!-- Register Form -->
                             <div class="rejister-form">
-                            
-                            <?php if(!empty($_SESSION['visit_action'])) echo $_SESSION['visit_action'];$_SESSION['visit_action']=NULL;?>
                                     
                                 <!--Contact Form-->
                                 <form method="post" action="">

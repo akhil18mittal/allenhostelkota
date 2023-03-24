@@ -1,0 +1,144 @@
+.theme-color {
+    color: #4267B2 !important;
+}
+
+.fa.fa-check-circle {
+    color: #4267B2;
+}
+
+/*.features-list-layout {*/
+/*    padding:15px;*/
+/*    font-size:14px;*/
+/*    font-weight:500;*/
+/*    margin-left: 32px;*/
+/*}*/
+
+
+.btn.btn-outline-primary {
+    border: 2px solid #4267B2;
+    color: #4267B2;
+    border-radius: 45px;
+    margin-bottom: 10px;
+}
+
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: #4267B2;
+    border-color: #4267B2;
+}
+
+.welcome-title h1.welcom-txt {
+  font-size: 28px;
+  text-transform: uppercase;
+  color: #505050;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+h1.welcom-txt span{
+    color: #4267B2 !important;
+}
+
+/*=================== Popup Section Starts Here===============*/
+
+#trial-popup-section{
+  margin: 80px 0;
+  text-align: center;
+}
+#trial-popup-section .modal-header{
+  background: transparent;
+  border: unset;
+}
+.modal-header .close:focus{
+  border: unset;
+  outline: unset;
+}
+#trial-popup-section .modal-dialog{
+  margin-top: 90px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+.modal-content{
+  border: unset;
+}
+#trial-popup-section .modal-header span{
+  font-size: 28px;
+}
+.modal-body{
+    padding: 30px 60px;
+}
+.modal-body .free-trial-btn{
+  width: 88%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 16px 24px;
+  text-align: left;
+  background: transparent;
+  border: 1px solid #1578de;
+  border-radius: 30px;
+  color: #343a40;
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+.modal-body .free-trial-btn:focus{
+  border: 1px solid #1578de;
+  outline: none;
+}
+.modal-body .free-trial-btn::before{
+  content: '';
+  position: absolute;
+  width: 0;
+  overflow: hidden;
+  height: 100%;
+  background: #1578de;
+  top: 0;
+  left: 0;
+  border-radius: 30px;
+  color: white;
+  transition: 0.3s ease-in-out;
+  padding: 16px 0;
+}
+.modal-body .free-trial-btn:hover::before{
+  width: 100%;
+  content: "I'll give it a go.";
+  border: 1px solid #1578de;
+  padding: 16px 24px;
+}
+
+.modal-body .free-trial-btn:last-of-type{
+  margin: 0;
+}
+.modal-body .free-trial-btn:last-of-type:hover::before{
+  content: "I'm just browsing.";
+}
+.trial-content{
+  margin-bottom: 24px;
+}
+.trial-chat p{
+  font-size: 20px;
+  font-weight: 500;
+}
+.trial-chat input{
+  width: 88%;
+  margin-bottom: 20px;
+  text-align: left;
+  background: rgba(21, 120, 222,0.2);
+  border: unset;
+  border-radius: 30px;
+  color: #343a40;
+  padding: 16px 24px;
+  border: 1px solid rgba(21, 120, 222,0.0);
+}
+.trial-chat input:focus{
+  border: 1px solid #1578de;
+  outline: none;
+}
+.trial-chat input.btn{
+  width: 40%;
+  text-align: center;
+}
+.modal{
+  padding-right: unset;
+  padding: 0 20px;
+}
+/*=================== Popup Section Ends Here===============*/

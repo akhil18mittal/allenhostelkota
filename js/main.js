@@ -322,11 +322,11 @@
 
      --------------------------------------*/
     $('nav#dropdown').meanmenu({
-  siteLogo: "<div class='menu-header-container'><a href='' class='logo-mobile-menu'><img src='img/prabhat_mobile_new_logo_1.png' /></a><a onclick='return gtag_report_conversion(\"tel:+918929150163\");' href='tel:+918929150163' class='btn btn-outline-primary text-right mobile-call-btn'><i class='bi bi-phone' aria-hidden='true'></i> Call Now</a></div>"
+  siteLogo: "<div class='menu-header-container'><a href='' class='logo-mobile-menu'><img src='img/prabhat_mobile_new_logo_1.png' /></a><a onclick='return gtag_report_conversion(\"tel:+917023415753\");' href='tel:+917023415753' class='btn btn-outline-primary text-right mobile-call-btn'><i class='bi bi-phone' aria-hidden='true'></i> Call Now</a></div>"
 });
 
     // $('nav#dropdown').meanmenu({
-    // siteLogo: "<a href='' class='logo-mobile-menu'><img src='img/prabhat_mobile_new_logo_1.png' /></a><a onclick='return gtag_report_conversion(\"tel:+918929150163\");' href='tel:+918929150163' class='btn btn-outline-primary text-right'>Call Now</a>"
+    // siteLogo: "<a href='' class='logo-mobile-menu'><img src='img/prabhat_mobile_new_logo_1.png' /></a><a onclick='return gtag_report_conversion(\"tel:+917023415753\");' href='tel:+917023415753' class='btn btn-outline-primary text-right'>Call Now</a>"
 // });
 
 

@@ -1,8 +1,11 @@
 # Node modules (Playwright dependencies)
 node_modules/
 
-# Playwright test results
+# Playwright test results and reports
 test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
 
 # Playwright screenshots
 *.png

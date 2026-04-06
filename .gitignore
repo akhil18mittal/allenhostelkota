@@ -1,0 +1,14 @@
+# Node modules (Playwright dependencies)
+node_modules/
+
+# Playwright test results
+test-results/
+
+# Playwright screenshots
+*.png
+
+# Playwright config file
+playwright.config.js
+
+# Logs
+*.log

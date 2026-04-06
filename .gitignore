@@ -1,6 +1,10 @@
 # Node modules (Playwright dependencies)
 node_modules/
 
+# Package files
+package.json
+package-lock.json
+
 # Playwright test results and reports
 test-results/
 playwright-report/
@@ -10,8 +14,9 @@ playwright/.cache/
 # Playwright screenshots
 *.png
 
-# Playwright config file
+# Playwright config and tests
 playwright.config.js
+tests/
 
 # Logs
 *.log

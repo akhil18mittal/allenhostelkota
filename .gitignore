@@ -22,3 +22,10 @@ tests/
 
 # Logs
 *.log
+
+# Windows hidden files
+desktop.ini
+
+# Temporary project folders
+update/
+project-demo-folder/

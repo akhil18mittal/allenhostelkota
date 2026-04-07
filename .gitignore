@@ -12,7 +12,9 @@ blob-report/
 playwright/.cache/
 
 # Playwright screenshots
-*.png
+/*-test.png
+/final-ui.png
+/homepage.png
 
 # Playwright config and tests
 playwright.config.js

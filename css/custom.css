@@ -142,6 +142,44 @@ h1.welcom-txt span{
   padding: 0 20px;
 }
 /*=================== Popup Section Ends Here===============*/
+/*=================== Testimonial Desktop Layout Update ===============*/
+@media (min-width: 768px) {
+    /* Force 2 columns regardless of carousel script */
+    .testimonial-container .plumber-carousel {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+
+    /* Target the cards and their carousel wrappers */
+    .testimonial-container .feedback-review-layout1,
+    .testimonial-container .owl-item {
+        width: calc(50% - 30px) !important;
+        flex: 0 0 calc(50% - 30px) !important;
+        margin: 15px !important;
+        min-height: 200px;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    /* Ensure the carousel stage doesn't restrict width */
+    .testimonial-container .owl-stage {
+        width: 100% !important;
+        display: flex !important;
+        transform: none !important;
+    }
+
+    /* Hide carousel navigation on desktop as we only have 2 cards */
+    .testimonial-container .owl-nav,
+    .testimonial-container .owl-dots {
+        display: none !important;
+    }
+}
+
+.testimonial-container .plumber-carousel .owl-stage-outer {
+    padding: 10px 0;
+}
 /*=================== Refined Testimonials Section ===============*/
 .refined-testimonial-row {
   display: flex !important;
@@ -241,5 +279,6 @@ h1.welcom-txt span{
     align-items: top !important;
     margin-bottom: 8px !important;
 }
+
 
 /*=================== Refined Testimonials Section Ends Here ===============*/

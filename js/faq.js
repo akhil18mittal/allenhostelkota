@@ -24,8 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (!isActive) {
                     setTimeout(() => {
                         const yOffset = -100; // Adjust for sticky headers
-                        const y = item.getBoundingClientRect().top + window.pageYOffset + yOffset;
-                        window.scrollTo({top: y, behavior: 'smooth'});
+                                               window.scrollTo({top: y, behavior: 'smooth'});
                     }, 400); // Wait for transition
                 }
             });

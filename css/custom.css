@@ -142,31 +142,55 @@ h1.welcom-txt span{
   padding: 0 20px;
 }
 /*=================== Popup Section Ends Here===============*/
+
 /*=================== Testimonial Desktop Layout Update ===============*/
 @media (min-width: 768px) {
     /* Force 2 columns regardless of carousel script */
     .testimonial-container .plumber-carousel {
         display: flex !important;
         flex-wrap: wrap !important;
-        justify-content: center !important;
+        justify-content: space-evenly !important;
     }
 
-    /* Target the cards and their carousel wrappers */
-    .testimonial-container .feedback-review-layout1,
+    /* Target the carousel wrappers */
     .testimonial-container .owl-item {
-        width: calc(50% - 30px) !important;
-        flex: 0 0 calc(50% - 30px) !important;
-        margin: 15px !important;
+        width: 48% !important;
+        flex: 0 0 48% !important;
+        margin: 0 !important;
+        display: flex !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Target the cards themselves */
+    .testimonial-container .feedback-review-layout1 {
+        width: 100% !important;
+        margin: 0 !important;
         min-height: 200px;
         display: flex !important;
         flex-direction: column;
         justify-content: space-between;
+        box-sizing: border-box !important;
+    }
+
+    /* Fallback if owl-carousel is not loaded */
+    .testimonial-container .plumber-carousel:not(.owl-loaded) .feedback-review-layout1 {
+        width: 48% !important;
+        flex: 0 0 48% !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Hide cloned items to prevent flex grid overflow from carousel logic */
+    .testimonial-container .owl-item.cloned {
+        display: none !important;
     }
 
     /* Ensure the carousel stage doesn't restrict width */
     .testimonial-container .owl-stage {
         width: 100% !important;
         display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: space-evenly !important;
         transform: none !important;
     }
 
@@ -180,6 +204,7 @@ h1.welcom-txt span{
 .testimonial-container .plumber-carousel .owl-stage-outer {
     padding: 10px 0;
 }
+
 /*=================== Refined Testimonials Section ===============*/
 .refined-testimonial-row {
   display: flex !important;
@@ -264,6 +289,13 @@ h1.welcom-txt span{
   }
 }
 
+.avatar-rating-side {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    margin-right: 15px !important;
+}
+
 .testimonial-avatar {
     width: 40px !important;
     height: 40px !important;
@@ -271,14 +303,139 @@ h1.welcom-txt span{
     object-fit: cover !important;
     border: 1px solid #eee !important;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08) !important;
-    margin-right: 10px !important;
+    margin-bottom: 5px !important;
 }
 
 .testimonial-header {
     display: flex !important;
-    align-items: top !important;
+    align-items: flex-start !important;
     margin-bottom: 8px !important;
 }
 
-
 /*=================== Refined Testimonials Section Ends Here ===============*/
+
+/*=================== Premium FAQ Accordion Section ===============*/
+#faq-section {
+    padding: 80px 0;
+}
+
+#faq-section .section-title-dark {
+    margin-bottom: 50px;
+}
+
+#faq-section .section-title-dark span {
+    color: #4267B2;
+}
+
+.faq-accordion {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.faq-item:hover {
+    background-color: #efefef;
+    border-color: #ddd;
+}
+
+.faq-item.active {
+    background-color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-color: #4267B2;
+}
+
+.faq-question {
+    padding: 20px 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+.faq-question span {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    line-height: 1.4;
+}
+
+.faq-icon {
+    font-size: 14px;
+    color: #4267B2;
+    transition: transform 0.4s ease;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px; /* Large enough to fit content */
+}
+
+.faq-answer-content {
+    padding: 0 25px 25px 25px;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.faq-emphasis {
+    font-weight: 700;
+    color: #4267B2;
+}
+
+.faq-checklist, .faq-bullets {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.faq-checklist li, .faq-bullets li {
+    margin-bottom: 8px;
+    position: relative;
+    list-style: none;
+}
+
+.faq-checklist li::before, .faq-bullets li::before {
+    content: "\f00c";
+    font-family: FontAwesome;
+    position: absolute;
+    left: -20px;
+    color: #4267B2;
+    font-size: 14px;
+}
+
+@media (max-width: 767px) {
+    #faq-section {
+        padding: 50px 0;
+    }
+    
+    .faq-question {
+        padding: 15px 20px;
+    }
+    
+    .faq-question span {
+        font-size: 16px;
+    }
+    
+    .faq-answer-content {
+        padding: 0 20px 20px 20px;
+        font-size: 14px;
+    }
+}
+/*=================== FAQ Section Ends Here ===============*/

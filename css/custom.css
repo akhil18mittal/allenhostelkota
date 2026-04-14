@@ -166,7 +166,6 @@ h1.welcom-txt span{
         width: 100% !important;
         margin: 0 !important;
         min-height: 200px;
-        display: flex !important;
         flex-direction: column;
         justify-content: space-between;
         box-sizing: border-box !important;
@@ -439,3 +438,19 @@ h1.welcom-txt span{
     }
 }
 /*=================== FAQ Section Ends Here ===============*/
+
+/*=================== Nearby Allen Buildings: Spacing Fix (Desktop Only) ===============*/
+@media (min-width: 768px) {
+    /* Collapse the gap between distance line and road name in Allen Buildings cards */
+    #nearby-allen-buildings .small.text-muted {
+        margin-top: 0 !important;
+        margin-bottom: 4px !important;
+        line-height: 1.3;
+    }
+
+    /* Add proper top spacing to the Why Choose Us heading */
+    .why-choose-title {
+        margin-top: 40px !important;
+    }
+}
+/*=================== Nearby Allen Buildings: Spacing Fix Ends Here ===============*/

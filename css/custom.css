@@ -462,3 +462,7 @@ h1.welcom-txt span{
   display: flex;
   flex-direction: column;  /* ye add kar */
 }
+
+#safety-security {
+    background: transparent !important;
+}

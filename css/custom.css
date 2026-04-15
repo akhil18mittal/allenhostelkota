@@ -173,8 +173,8 @@ h1.welcom-txt span{
 
     /* Fallback if owl-carousel is not loaded */
     .testimonial-container .plumber-carousel:not(.owl-loaded) .feedback-review-layout1 {
-        width: 48% !important;
-        flex: 0 0 48% !important;
+        width: 4% !important;
+        flex: 0 0 40% !important;
         margin: 0 !important;
         box-sizing: border-box !important;
     }
@@ -454,3 +454,11 @@ h1.welcom-txt span{
     }
 }
 /*=================== Nearby Allen Buildings: Spacing Fix Ends Here ===============*/
+.map iframe {
+  border-radius: 10px;
+  
+}
+.contact-container {
+  display: flex;
+  flex-direction: column;  /* ye add kar */
+}

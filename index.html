@@ -145,32 +145,15 @@
         <!-- Top Bar Space Start-->
         <div id="header-area-space"></div>
         <!-- Top Bar Space End-->
-        <div id="masterslider" class="master-slider ms-skin-default">
-            <div class="ms-slide" data-fill-mode="stretch">
-                <!-- slide background -->
-                <img data-src="img/gallery/Deluxe Single Room.jpg" alt="Allen Kota Boys Hostel" />
-            </div>
-            <div class="ms-slide" data-fill-mode="stretch">
-                <!-- slide background -->
-                <img src="img/gallery/deluxe single room 2.jpg" alt="Boys Hostel in Landmark City Kota" />
-            </div>
-            <div class="ms-slide" data-fill-mode="stretch">
-                <!-- slide background -->
-                <img src="img/gallery/deluxe_single_room.jpg" alt="Boys Hostel Near Allen Sangyan" />
-            </div>
-            <div class="ms-slide" data-fill-mode="stretch">
-                <!-- slide background -->
-                <img src="img/gallery/deluxe double room 2.jpg" alt="Best Hostel in Landmark city Kunhari Kota" />
-            </div>
-            <div class="ms-slide" data-fill-mode="stretch">
-                <!-- slide background -->
-                <img data-src="img/gallery/deluxe double room.jpg" alt="Room for students near Allen" />
-            </div>
-            <div class="ms-slide" data-fill-mode="stretch">
-                <!-- slide background -->
-                <img data-src="img/gallery/prabhat_front_3.jpg" alt="Room for students near Allen" />
-            </div>
+        <!-- Slider Area End Here -->
+        <div class="video-hero-container">
+            <video id="hero-video" class="hero-video" controls muted loop playsinline poster="img\gallery\Hostel Building Pic.jpeg">
+                <source src="assets/video/hostel.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
+        <!-- Slider Area End Here -->
+
         <!-- Slider Area End Here -->
         <div class="section-space-less30" id="why-choose-us">
             <div class="container">
@@ -1259,31 +1242,17 @@
         <!-- Isotope js -->
         <script src="js/isotope.pkgd.min.js"></script>
         <!-- Magic Popup js -->
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/room-gallery.js"></script>
         <!-- Custom Js -->
     <script src="js/main.js"></script>
+
+
+
     <script src="js/faq.js"></script>
     <script src="js/masterslider.min.js"></script>
-    <script type="text/javascript">
-        jQuery(document).ready(function ($) {
-            'use strict';
-            var slider = new MasterSlider();
-            slider.setup('masterslider', {
-                width: 1120, // slider standard width
-                height: 730, // slider standard height
-                space: 0,
-                speed: 20,
-                autoHeight: false,
-                layout: "fullwidth",
-                smoothHeight: true,
-                centerControls: false,
-                loop: true,
-                keyboard: true,
-                autoplay: true
-            });
-            slider.control('arrows');
-        });
-    </script>
     </div>
 </body>
+
 
 </html>

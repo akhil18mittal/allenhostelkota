@@ -466,3 +466,63 @@ h1.welcom-txt span{
 #safety-security {
     background: transparent !important;
 }
+
+/* Room Category - Disable Hover Zoom and enable Click indicator */
+.blog-wrp-layout1 .image-box img {
+    cursor: pointer;
+}
+
+.blog-wrp-layout1:hover .image-box img {
+    transform: none !important;
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -o-transform: none !important;
+}
+
+
+/* Magnific Popup Fade Animation */
+.mfp-fade.mfp-bg {
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+.mfp-fade.mfp-bg.mfp-ready {
+    opacity: 0.8;
+}
+.mfp-fade.mfp-bg.mfp-removing {
+    opacity: 0;
+}
+.mfp-fade.mfp-wrap .mfp-content {
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+    opacity: 1;
+}
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+    opacity: 0;
+}
+/* Top Section Video Styles */
+.video-hero-container {
+    width: 100%;
+    background-color: #000;
+    line-height: 0;
+    overflow: hidden;
+}
+
+.hero-video {
+    width: 100%;
+    height: auto;
+    max-height: 730px;
+    object-fit: cover;
+    display: block;
+}
+
+@media only screen and (max-width: 767px) {
+    .hero-video {
+        max-height: none; /* Let the height be natural on mobile */
+    }
+}
+
+
+

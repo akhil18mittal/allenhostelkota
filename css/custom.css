@@ -614,6 +614,7 @@ h1.welcom-txt span{
 /* Video Control Button */
 .video-hero-container {
     position: relative;
+    background-color: #000;
 }
 
 #video-controls {
@@ -621,46 +622,57 @@ h1.welcom-txt span{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 10;
+    z-index: 100;
+    pointer-events: none; /* Allow clicks to pass through wrapper */
 }
 
 #play-pause-btn {
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(5px);
-    border: 2px solid #fff;
-    color: #fff;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    font-size: 24px;
-    cursor: pointer;
-    transition: all 0.4s ease;
+    position: relative; /* Relative to centered wrapper */
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: transparent; /* Removed dark/blur background */
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     outline: none;
-    opacity: 0; /* Hidden by default when playing */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Add a subtle shadow instead of a solid background */
+    opacity: 0;
+
     visibility: hidden;
+    pointer-events: auto; /* Re-enable clicks for the actual button */
 }
 
-/* Only show button if video is paused */
+/* Visibility based on state class from JS */
 .video-hero-container.is-paused #play-pause-btn {
     opacity: 1;
     visibility: visible;
 }
 
 #play-pause-btn:hover {
-    background: rgba(255, 255, 255, 0.4);
-    transform: translate(-50%, -50%) scale(1.1);
+    background: transparent;
+    transform: scale(1.15);
 }
 
-/* Ensure centering with transform is preserved */
-#play-pause-btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+#play-pause-btn i {
+    margin-left: 4px; /* Slight offset for play icon to look centered */
 }
+
+#play-pause-btn i.fa-pause {
+    margin-left: 0;
+}
+
+/* Hide native browser overlay play button while keeping bottom controls */
+video::-webkit-media-controls-overlay-play-button {
+    display: none !important;
+    appearance: none;
+}
+
 
 /* Footer Map and Alignment Fixes */
 .footer-map-container {

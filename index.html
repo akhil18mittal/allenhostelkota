@@ -56,7 +56,7 @@
     <link href="css/stylesheet.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/custom.css?v=1.1">
     <style>
         .menu-header-container {
             display: flex;
@@ -151,6 +151,11 @@
                 <source src="assets/video/hostel.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
+            <div id="video-controls">
+                <button id="play-pause-btn" title="Play/Pause">
+                    <i class="fa fa-pause"></i>
+                </button>
+            </div>
         </div>
         <!-- Slider Area End Here -->
 
@@ -266,8 +271,9 @@
                             <div class="col-md-4">
                                 <div class="blog-wrp-layout1">
                                     <div class="image-box">
-                                        <img src="img/gallery/deluxe double room 2.jpg" alt="Standard Double Room">
+                                        <img src="img/gallery/double room 1.jpg" alt="Standard Double Room">
                                     </div>
+
                                     <div class="content-box text-center">
                                         <h2><a>Standard Double Room</a></h2>
                                         <p style="text-align:justify; padding:15px;font-size:14px;font-weight:500;">
@@ -1160,14 +1166,14 @@
             <div class="footer-area-top accent-bg">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                             <h3 class="title-bar-footer">About</h3>
                             <p>Prabhat Residency is a premium boys hostel near Allen Kota. Open since 2016, Prabhat
                                 Residency has accommodated only medical student preparing for NEET in Allen Career
                                 Institute in landmark city Kota. It is the only hostel in Kota near Allen where
                                 hostel owner lives exactly in front of hostel. </p>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                             <div class="footer-box">
                                 <h3 class="title-bar-footer">Contact Us</h3>
                                 <ul class="corporate-address">
@@ -1186,15 +1192,20 @@
                                 </li>
                                                                    <li>
                                         <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                        <p>2-F-16, RAJASTHAN HOUSING BOARD COLONY,</p>
-                                        <p>KUNHARI, KOTA, RAJASTHAN, INDIA - 324008</p>
-                                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.1618118942556!2d75.82988967516363!3d25.19776507771057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396f9b1293d87f99%3A0x6fa2bf2e2e251217!2sPrabhat%20Residency!5e0!3m2!1sen!2sin!4v1776240061214!5m2!1sen!2sin"
-                         width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" 
-                         referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        <p>2-F-16, RHB Colony, Kunhari, Kota, Rajasthan, 324008</p>
                                     </li>
                                 </ul>
                             </div>
                         </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                            <h3 class="title-bar-footer">Find Us</h3>
+                            <div class="footer-map-container">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.1618118942556!2d75.82988967516363!3d25.19776507771057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396f9b1293d87f99%3A0x6fa2bf2e2e251217!2sPrabhat%20Residency!5e0!3m2!1sen!2sin!4v1776240061214!5m2!1sen!2sin"
+                                    width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
                        
                         <!--                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">-->
                         <!--                                <div class="footer-box">-->
@@ -1218,8 +1229,8 @@
                 <div class="container">
                     <p>&copy;
                         <?php echo date('Y');?> <span>Prabhat Residency</span>. All rights reserved<br /><span
-                            style="font-size:12px;">Website by <a href="http://webmaverick.in/"
-                                style="color: #fc721e; text-decoration:none;" target="_blank">WebMaverick</a></span>
+                            style="font-size:12px;">This site is made with ❤️ by <a href="http://webmaverick.in/"
+                                style="color: #fc721e; text-decoration:none;" target="_blank">VipraTech Pvt.Ltd.</a></span>
                     </p>
                 </div>
             </div>
@@ -1243,9 +1254,9 @@
         <script src="js/isotope.pkgd.min.js"></script>
         <!-- Magic Popup js -->
         <script src="js/jquery.magnific-popup.min.js"></script>
-        <script src="js/room-gallery.js"></script>
-        <!-- Custom Js -->
-    <script src="js/main.js"></script>
+        <script src="js/room-gallery.js?v=1.1"></script>
+        <script src="js/video-controls.js?v=1.1"></script>
+        <script src="js/main.js?v=1.1"></script>
 
 
 

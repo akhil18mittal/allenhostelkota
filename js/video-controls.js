@@ -12,25 +12,35 @@
         var btnIcon = $('#play-pause-btn i');
 
         if (video && playBtn) {
+            var $container = $('.video-hero-container');
+
+            // Initialize state
+            if (video.paused) {
+                $container.addClass('is-paused');
+                btnIcon.removeClass('fa-pause').addClass('fa-play');
+            } else {
+                $container.removeClass('is-paused');
+                btnIcon.removeClass('fa-play').addClass('fa-pause');
+            }
             
             // Toggle play/pause on button click
             playBtn.addEventListener('click', function() {
                 if (video.paused) {
                     video.play();
-                    btnIcon.removeClass('fa-play').addClass('fa-pause');
                 } else {
                     video.pause();
-                    btnIcon.removeClass('fa-pause').addClass('fa-play');
                 }
             });
 
             // Handle video tag native events (in case user uses right click or browser controls)
             video.addEventListener('play', function() {
                 btnIcon.removeClass('fa-play').addClass('fa-pause');
+                $container.removeClass('is-paused');
             });
 
             video.addEventListener('pause', function() {
                 btnIcon.removeClass('fa-pause').addClass('fa-play');
+                $container.addClass('is-paused');
             });
         }
     });

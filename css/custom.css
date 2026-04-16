@@ -467,19 +467,95 @@ h1.welcom-txt span{
     background: transparent !important;
 }
 
-/* Room Category - Disable Hover Zoom and enable Click indicator */
+/* Room Category - Alignment and Uniformity Fixes */
+.blog-wrp-layout1 {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 .blog-wrp-layout1 .image-box img {
     cursor: pointer;
+    height: 220px; /* Fixed height for consistency */
+    width: 100%;
+    object-fit: cover; /* Ensures images don't distort */
+}
+
+.blog-wrp-layout1 .content-box {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 15px !important;
+}
+
+.blog-wrp-layout1 .content-box h2 {
+    min-height: 50px; /* Standardize title height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-wrp-layout1 .content-box .btn {
+    margin-top: auto; /* Push button to bottom */
+}
+
+/* Ensure horizontal alignment in the row and vertical spacing between rows */
+#rooms-section + .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#rooms-section + .row > [class*="col-"] {
+    margin-bottom: 30px; /* Force spacing between cards and rows */
 }
 
 .blog-wrp-layout1:hover .image-box img {
     transform: none !important;
-    -webkit-transform: none !important;
-    -moz-transform: none !important;
-    -ms-transform: none !important;
-    -o-transform: none !important;
 }
 
+/* Room Features List Styling */
+.blog-wrp-layout1 .content-box .room-features-list {
+    list-style: none;
+    padding: 15px 15px 10px 25px !important;
+    margin: 0;
+    text-align: left;
+}
+
+.blog-wrp-layout1 .content-box .room-features-list .list-title {
+    color: #fc721e;
+    font-weight: 700;
+    display: block !important;
+    margin-bottom: 12px;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    width: 100%;
+}
+
+.blog-wrp-layout1 .content-box .room-features-list li {
+    display: flex !important; /* Force block/flex display to override theme inline style */
+    align-items: flex-start;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #444;
+    width: 100%;
+    text-align: left !important;
+}
+
+.blog-wrp-layout1 .content-box .room-features-list li i {
+    color: #4267B2;
+    margin-right: 12px;
+    margin-top: 3px;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.blog-wrp-layout1 .content-box .room-features-list li .feature-label {
+    font-weight: 600;
+    margin-right: 4px;
+}
 
 /* Magnific Popup Fade Animation */
 .mfp-fade.mfp-bg {
@@ -522,6 +598,17 @@ h1.welcom-txt span{
     .hero-video {
         max-height: none; /* Let the height be natural on mobile */
     }
+
+    /* Room Categories Mobile Layout Fix */
+    #rooms-section + .row > [class*="col-"] {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 30px; /* Space between stacked cards */
+    }
+
+    .blog-wrp-layout1 .content-box .room-features-list {
+        padding: 10px 15px !important; /* Reduced side padding for more text room */
+    }
 }
 
 /* Video Control Button */
@@ -547,19 +634,35 @@ h1.welcom-txt span{
     border-radius: 50%;
     font-size: 24px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     display: flex;
     align-items: center;
     justify-content: center;
     outline: none;
+    opacity: 0; /* Hidden by default when playing */
+    visibility: hidden;
+}
+
+/* Only show button if video is paused */
+.video-hero-container.is-paused #play-pause-btn {
+    opacity: 1;
+    visibility: visible;
 }
 
 #play-pause-btn:hover {
     background: rgba(255, 255, 255, 0.4);
-    transform: scale(1.1);
+    transform: translate(-50%, -50%) scale(1.1);
 }
 
-/* Footer Map Resizing */
+/* Ensure centering with transform is preserved */
+#play-pause-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Footer Map and Alignment Fixes */
 .footer-map-container {
     width: 100%;
     margin-top: 10px;
@@ -567,15 +670,72 @@ h1.welcom-txt span{
 
 .footer-map-container iframe {
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     width: 100%;
-    height: 350px;
+    height: 280px; /* Reduced from 350px for better balance */
+}
+
+/* Unify Footer Backgrounds and Remove White Line GAP */
+.footer-area-top,
+.footer-area-bottom {
+    background-color: #1a1a1a !important; /* Uniform deep black/grey */
+    border: none !important;
+    margin: 0 !important;
+}
+
+.footer-area-top {
+    padding-bottom: 20px !important; /* Adjust spacing */
+}
+
+.footer-area-bottom {
+    padding-top: 20px !important;
+    border-top: 1px solid rgba(255,255,255,0.05) !important; /* Subtle separator instead of white line */
+}
+
+.title-bar-footer {
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.title-bar-footer:after {
+    content: "";
+    width: 40px;
+    height: 2px;
+    background: #fc721e; /* Theme accent color */
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 @media only screen and (max-width: 991px) {
     .footer-map-container iframe {
-        height: 300px;
+        height: 250px;
     }
+}
+
+/* Footer Section Balance */
+.footer-area-top p {
+    font-size: 15px;
+    line-height: 1.8 !important; /* Increased spacing */
+    color: #cbd3e1 !important; 
+    padding-top: 5px;
+    margin-bottom: 25px;
+}
+
+.corporate-address li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.corporate-address li i {
+    margin-top: 5px;
+}
+
+.corporate-address li p {
+    margin-left: 10px;
+    margin-bottom: 0;
 }
 
 
